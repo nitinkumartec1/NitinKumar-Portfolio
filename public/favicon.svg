@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121216" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b3b" />
+      <stop offset="100%" stop-color="#e01212" />
+    </linearGradient>
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d0d0d8" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="40%" stop-color="#ff2e2e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ff2e2e" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="18" y="18" width="476" height="476" rx="116" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
+
+  <!-- Ambient Red Glows -->
+  <circle cx="390" cy="120" r="100" fill="#ff2e2e" opacity="0.22" filter="url(#glow)" />
+  <circle cx="120" cy="390" r="90" fill="#ff2e2e" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Monogram Group -->
+  <g transform="translate(18, 0)">
+    <!-- N: Left Pillar -->
+    <path d="M 100 134 C 100 126 106 120 114 120 L 152 120 C 160 120 166 126 166 134 L 166 378 C 166 386 160 392 152 392 L 114 392 C 106 392 100 386 100 378 Z" fill="url(#whiteGrad)" />
+
+    <!-- N: Diagonal Slash (Red Electric Stroke) -->
+    <path d="M 166 142 L 254 350 L 254 392 L 222 392 L 140 186 L 140 142 Z" fill="url(#redGrad)" />
+
+    <!-- Joint Spine (Right of N / Left of K) -->
+    <path d="M 234 134 C 234 126 240 120 248 120 L 286 120 C 294 120 300 126 300 134 L 300 378 C 300 386 294 392 286 392 L 248 392 C 240 392 234 386 234 378 Z" fill="url(#whiteGrad)" />
+
+    <!-- K: Upper Diagonal Branch -->
+    <path d="M 276 270 L 374 132 C 378 126 386 120 396 120 L 434 120 C 442 120 446 128 440 136 L 334 286 Z" fill="url(#redGrad)" />
+
+    <!-- K: Lower Diagonal Branch -->
+    <path d="M 314 262 L 424 378 C 430 384 426 392 418 392 L 374 392 C 366 392 358 386 352 380 L 268 288 Z" fill="url(#whiteGrad)" />
+
+    <!-- Accent Spark / Star on Top Right -->
+    <path d="M 400 76 Q 400 96 420 96 Q 400 96 400 116 Q 400 96 380 96 Q 400 96 400 76 Z" fill="#ff2e2e" />
+  </g>
+</svg>
